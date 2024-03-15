@@ -17,14 +17,14 @@ def formating(pdf_text):
     info_text = []
     for pag in pages:
         information = pag.split(" ")
-        # if len(information) == 3:
-        cod, denumire, pret_unitar, cantitate = information
-        info_text.append({
-            'cod': cod,
-            'denumire': denumire,
-            'pret_unitar': pret_unitar,
-            'cantitate': cantitate
-            })
+        if len(information) == 4:
+            cod, denumire, pret_unitar, cantitate = information
+            info_text.append({
+                'cod': cod,
+                'denumire': denumire,
+                'pret_unitar': pret_unitar,
+                'cantitate': cantitate
+                })
     return info_text
 
 
